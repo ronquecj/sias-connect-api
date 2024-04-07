@@ -22,6 +22,14 @@ const RequestSchema = new mongoose.Schema(
       type: String,
       default: 'Pending',
     },
+    dateOfRequest: {
+      type: String,
+      default: Date.now,
+    },
+    quantity: {
+      type: Number,
+      default: 1,
+    },
   },
   { timestamps: true }
 );

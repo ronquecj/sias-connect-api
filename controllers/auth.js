@@ -15,6 +15,7 @@ export const registerStudent = async (req, res) => {
       year,
       password,
       gender,
+      phoneNumber,
     } = req.body;
 
     const salt = await bcryptjs.genSalt();
@@ -29,6 +30,7 @@ export const registerStudent = async (req, res) => {
       year,
       password: passwordHash,
       gender,
+      phoneNumber,
     });
 
     const savedStudent = await newStudent.save();
