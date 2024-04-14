@@ -1,5 +1,8 @@
 import mongoose from 'mongoose';
 
+const date = new Date();
+const month = date.getMonth();
+
 const RequestSchema = new mongoose.Schema(
   {
     type: {
@@ -16,7 +19,7 @@ const RequestSchema = new mongoose.Schema(
     },
     currentSemester: {
       type: String,
-      required: true,
+      default: month >= 0 && month <= 6 ? 1 : 0,
     },
     status: {
       type: String,

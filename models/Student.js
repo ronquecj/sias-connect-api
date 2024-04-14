@@ -35,10 +35,18 @@ const StudentSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    phoneNumber:{
+    phoneNumber: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
+    course: {
+      type: String,
+      required: true,
+    },
+    address: {
+      type: String,
+      required: true,
+    },
   },
   { timestamps: true }
 );
