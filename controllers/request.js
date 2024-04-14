@@ -62,3 +62,18 @@ export const getRequestById = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
+
+// DELETE REQUEST BY ID
+export const deleteRequestByID = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const ObjectId = mongoose.Types.ObjectId;
+    const requests = await Request.deleteOne({
+      _id: new ObjectId(id),
+    }).exec();
+
+    res.status(200).json({ count: requests.length, requests });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
