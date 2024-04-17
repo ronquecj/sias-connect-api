@@ -31,7 +31,6 @@ const RequestSchema = new mongoose.Schema(
     },
     quantity: {
       type: Number,
-      default: 1,
     },
   },
   { timestamps: true }
