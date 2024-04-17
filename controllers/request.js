@@ -11,7 +11,7 @@ export const newRequest = async (req, res) => {
     const newRequest = new Request({
       type,
       academicYear,
-      currentSemester,
+      quantity,
       studentData: user,
     });
 
