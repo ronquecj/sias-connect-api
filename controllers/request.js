@@ -5,7 +5,7 @@ import mongoose from 'mongoose';
 // CREATE REQUEST
 export const newRequest = async (req, res) => {
   try {
-    const { type, academicYear, currentSemester, id } = req.body;
+    const { type, academicYear, quantity, id } = req.body;
     const user = await User.findById(id);
 
     const newRequest = new Request({
