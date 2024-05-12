@@ -9,6 +9,7 @@ export const registerStudent = async (req, res) => {
     const {
       studentID,
       firstName,
+      middleName,
       lastName,
       age,
       dateOfBirth,
@@ -26,6 +27,7 @@ export const registerStudent = async (req, res) => {
     const newStudent = new Student({
       studentID,
       firstName,
+      middleName,
       lastName,
       age,
       dateOfBirth,
